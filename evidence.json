@@ -1,12 +1,23 @@
 {
-  "summary": "Dogfooding run for Frantic bounty #147: a minimal Chrome MV3 extension (QB Dogfood Probe v1.0.0) was built locally, loaded into Google Chrome for Testing 156.0.8078.4 via --load-extension, verified ENABLED with zero runtime errors through the chrome://extensions developerPrivate API, and its popup was opened and rendered successfully in a real browser session.",
+  "query": "chrome.developerPrivate.getExtensionsInfo() via chrome://extensions CDP session",
+  "lookup_type": "browser_extension_state",
+  "performed_at": "2026-11-10T08:24:00Z",
+  "browser": "Google Chrome for Testing 156.0.8078.4",
+  "result": [
+    {
+      "id": "jnaceifbmbnelpebnafedjipeopgmjpb",
+      "name": "QB Dogfood Probe",
+      "state": "ENABLED",
+      "version": "1.0.0",
+      "errors": 0
+    }
+  ],
+  "summary": "Live lookup of installed extension state: exactly one extension loaded via --load-extension, state ENABLED, zero runtime errors.",
   "observations": [
     "Extension source: manifest_version 3, name 'QB Dogfood Probe', version 1.0.0, action popup popup.html",
     "Browser: Google Chrome for Testing 156.0.8078.4, headless=new mode, dedicated user-data-dir, --load-extension flag",
-    "Verification command (developerPrivate.getExtensionsInfo via chrome://extensions page CDP session): [{\"id\":\"jnaceifbmbnelpebnafedjipeopgmjpb\",\"name\":\"QB Dogfood Probe\",\"state\":\"ENABLED\",\"version\":\"1.0.0\",\"errors\":0}]",
     "Popup opened at chrome-extension://jnaceifbmbnelpebnafedjipeopgmjpb/popup.html; DOM text returned: 'QB Dogfood Probe | Extension loaded OK'",
     "Popup render captured: screenshot dogfood_ext_popup.png in this repo",
-    "Runtime errors observed: 0",
-    "Known gaps: this is a purpose-built minimal probe extension; no Web Store listing involved (unpacked load path); popup title attribute empty (document.title blank) because no <title> tag was set in popup.html"
+    "Known gaps: purpose-built minimal probe extension; unpacked load path (no Web Store); popup document.title empty (no <title> tag)"
   ]
 }
